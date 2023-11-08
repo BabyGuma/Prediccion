@@ -16,7 +16,7 @@ jobs:
     - name: Instalar dependencias
       run: pip install -r requirements.txt
     - name: download dataset
-      run: wget -O data/spotify.csv ${{github.event.client_payload.dataseturl}}
+      run: wget -O https://firebasestorage.googleapis.com/v0/b/prediction-spotify.appspot.com/o/playlist.csv?alt=media&token=0329091b-d094-42dd-a9ad-a3fedd1c80f6 ${{github.event.client_payload.dataseturl}}
     - name: cat dataset
       run: cat data/playlist.csv
     - name: Entrenar modelo de Machine Learning
